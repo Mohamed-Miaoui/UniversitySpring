@@ -11,4 +11,5 @@ public interface IUniversite {
     public List<Universite> findAllUniversite();
     public Universite findByIdUniversite(long id);
     public void deleteUniversite(long id);
+    public Universite addUniverstyAndAssaignFoyer(Universite u,long idF);
 }

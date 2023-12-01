@@ -10,4 +10,5 @@ public interface IBloc {
     public List<Bloc> findAllBloc();
     public Bloc findByIdBloc(long id);
     public void deleteBloc(long id);
+    public Bloc findBlocByChambreListidChambre(long idchambre);
 }

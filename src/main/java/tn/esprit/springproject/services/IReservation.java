@@ -10,4 +10,6 @@ public interface IReservation {
     public List<Reservation> findAllReservation();
     public Reservation findByIdReservation(long id);
     public void deleteReservation(long id);
+    public List<Reservation> findByEtudiantListnomEt(String name);
+    public List<Reservation> findByEtudiantListnomEtStartingWith(String préfix);
 }

@@ -33,4 +33,9 @@ public class BlocServiceImp implements IBloc{
     public void deleteBloc(long id) {
         blocRepository.deleteById(id);
     }
+
+    @Override
+    public Bloc findBlocByChambreListidChambre(long idchambre) {
+        return blocRepository.findBlocByChambreList_idChambre(idchambre);
+    }
 }

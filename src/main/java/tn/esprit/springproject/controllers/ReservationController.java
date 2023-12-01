@@ -37,5 +37,14 @@ public class ReservationController {
         ReservationServiceImp.deleteReservation(id);
     }
 
+    @GetMapping("/resBynomet/{name}")
+    public List<Reservation> findByEtudiantListnomEt(@PathVariable String name){
+        return ReservationServiceImp.findByEtudiantListnomEt(name);
+    }
+    @GetMapping("/resBynometp/{préfix}")
+    public List<Reservation> findByEtudiantListnomEtStartingWith(@PathVariable String préfix){
+        return ReservationServiceImp.findByEtudiantListnomEtStartingWith(préfix);
+    }
+
 
 }

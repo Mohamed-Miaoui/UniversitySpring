@@ -41,4 +41,9 @@ public class UniversiteController {
         universiteServiceImp.deleteUniversite(id);
     }
 
+    @PostMapping("/addUniverstyAndAssaignFoyer/{idF}")
+    public Universite addUniverstyAndAssaignFoyer(@RequestBody Universite u,@PathVariable long idF){
+        return universiteServiceImp.addUniverstyAndAssaignFoyer(u,idF);
+    }
+
 }

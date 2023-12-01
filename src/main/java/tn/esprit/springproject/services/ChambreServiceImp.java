@@ -1,10 +1,12 @@
 package tn.esprit.springproject.services;
 
 import org.springframework.stereotype.Service;
+import tn.esprit.springproject.entites.Bloc;
 import tn.esprit.springproject.entites.Chambre;
 import tn.esprit.springproject.repositories.ChambreRepository;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class ChambreServiceImp implements IChambre{
@@ -33,4 +35,11 @@ public class ChambreServiceImp implements IChambre{
     public void deleteChambre(long id) {
         chambreRepository.deleteById(id);
     }
+
+    @Override
+    public Set<Chambre> findChambresByBlocid(long idbloc) {
+        return chambreRepository.findChambresByBloc_idBloc(idbloc);
+    }
+
+
 }

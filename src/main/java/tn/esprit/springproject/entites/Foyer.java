@@ -1,5 +1,6 @@
 package tn.esprit.springproject.entites;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,6 +20,7 @@ public class Foyer implements Serializable {
     private long idFoyer;
     private String nomFoyer;
     private long capaciteFoyer;
+    @JsonIgnore
     @OneToOne(mappedBy = "foyer") //mappedby fil fils => fk appears in the other table (patent)
     private Universite universite;
     @OneToMany(mappedBy = "foyer")

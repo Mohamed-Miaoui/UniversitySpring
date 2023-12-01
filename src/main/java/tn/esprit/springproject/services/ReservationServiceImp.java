@@ -33,4 +33,14 @@ public class ReservationServiceImp implements IReservation {
     public void deleteReservation(long id) {
         reservationRepository.deleteById(id);
     }
+
+    @Override
+    public List<Reservation> findByEtudiantListnomEt(String name) {
+        return reservationRepository.findByEtudiantList_nomEt(name);
+    }
+
+    @Override
+    public List<Reservation> findByEtudiantListnomEtStartingWith(String préfix) {
+        return reservationRepository.findByEtudiantList_nomEtStartingWith(préfix);
+    }
 }

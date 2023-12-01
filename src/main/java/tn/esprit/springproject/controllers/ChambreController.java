@@ -6,6 +6,7 @@ import tn.esprit.springproject.entites.Chambre;
 import tn.esprit.springproject.services.ChambreServiceImp;
 
 import java.util.List;
+import java.util.Set;
 
 @AllArgsConstructor
 @RestController
@@ -35,5 +36,10 @@ public class ChambreController {
     @DeleteMapping("/deleteEcham/{id}")
     public void deleteById(@PathVariable long id){
         chambreServiceImp.deleteChambre(id);
+    }
+
+    @GetMapping("/getchams/{idbloc}")
+    public Set<Chambre> findChambresByBloc_idBloc(@PathVariable  long idbloc){
+        return chambreServiceImp.findChambresByBlocid(idbloc);
     }
 }
